@@ -3,64 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UsmanCyber61 | Portfolio</title>
+    <title>Usman Qadeer | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         body {
-            font-family: Arial, sans-serif;
             background-color: #0d1117;
             color: #c9d1d9;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            min-height: 100vh;
+            padding: 20px;
         }
-        .card {
+
+        .container {
             background-color: #161b22;
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
             border: 1px solid #30363d;
-            max-width: 400px;
+            border-radius: 12px;
+            max-width: 550px;
             width: 100%;
+            padding: 30px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
         }
-        h1 { color: #58a6ff; margin-bottom: 5px; }
-        p { color: #8b949e; margin-bottom: 25px; }
-        .links a {
+
+        .header {
+            text-align: center;
+            border-bottom: 1px solid #21262d;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            background-color: #21262d;
+            color: #58a6ff;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 36px;
+            margin: 0 auto 15px auto;
+            border: 2px solid #58a6ff;
+        }
+
+        .name {
+            color: #58a6ff;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .title {
+            color: #8b949e;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 15px;
+            color: #f0f6fc;
+            margin-bottom: 10px;
+            border-left: 3px solid #58a6ff;
+            padding-left: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .bio {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #8b949e;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background-color: #21262d;
+            color: #c9d1d9;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            border: 1px solid #30363d;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 10px;
-            padding: 12px;
-            margin: 10px 0;
+            margin-top: 10px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px;
             background-color: #21262d;
             color: #c9d1d9;
             text-decoration: none;
             border-radius: 6px;
             border: 1px solid #30363d;
-            font-weight: bold;
-            transition: 0.2s;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s ease;
         }
-        .links a:hover {
+
+        .btn:hover {
             background-color: #30363d;
             color: #58a6ff;
+            border-color: #58a6ff;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 11px;
+            color: #484f58;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>Usman Qadeer</h1>
-        <p>Cyber Security Student</p>
-        <div class="links">
-            <a href="https://github.com/UsmanCyber61" target="_blank">
-                <i class="fab fa-github"></i> GitHub Profile
-            </a>
-            <a href="https://www.linkedin.com/in/usman-qadeer-54a2493b2/" target="_blank">
-                <i class="fab fa-linkedin"></i> LinkedIn Profile
-            </a>
+
+    <div class="container">
+        <!-- Profile Header -->
+        <div class="header">
+            <div class="avatar">
+                <i class="fas fa-user-shield"></i>
+            </div>
+            <div class="name">Usman Qadeer</div>
+            <div class="title">Cyber Security Student & Linux Enthusiast</div>
         </div>
+
+        <!-- About Section -->
+        <div class="section">
+            <div class="section-title">About Me</div>
+            <div class="bio">
+                Passionate Cyber Security student focused on Linux system administration, network security, and offensive security practices. Dedicated to hands-on learning through security labs and CTF challenges.
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-container">
+                <span class="skill-tag">Cyber Security</span>
+                <span class="skill-tag">Linux / Kali</span>
+                <span class="skill-tag">Network Security</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">Ethical Hacking Labs</span>
+            </div>
+        </div>
+
+        <!-- Links Section -->
+        <div class="section">
+            <div class="section-title">Profiles & Socials</div>
+            <div class="links-grid">
+                <a href="https://github.com/UsmanCyber61" target="_blank" class="btn">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/usman-qadeer-54a2493b2/" target="_blank" class="btn">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2026 Usman Qadeer. Hosted on GitHub Pages.
+        </footer>
     </div>
+
 </body>
 </html>
